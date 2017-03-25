@@ -156,6 +156,10 @@ input{
 /*
 * 文章详情样式
 */
+.detail-box {
+  font-size: 14px!important;
+  line-height: 2!important;
+}
 .detail-box,.comments-box {
   width:888px;
   background: #fff;
