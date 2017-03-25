@@ -2,7 +2,11 @@
   这是一个基于react+koa2技术栈开发的，纯手工、从零开始构建的个人开源博客，准确来说应该是一个小型社区，目前是一个雏形。   
   如果你有足够的时间和精力，完全可以把[sinn](http://sinn.boyagirl.com)拓展为一个比较完备的小型、中型社区。   
 
-  测试demo: http://test.boyagirl.com
+  前端基于react+dva架构，dva是基于redux、redux-saga 和 react-router@2.x 开发的轻量级前端框架
+
+  测试demo: http://test.boyagirl.com   
+
+  体验账号—用户: sinn  密码：123456
 
   已上线地址：http://sinn.boyagirl.com    
 
@@ -34,7 +38,7 @@ docker, nginx, linux, 阿里云ecs
 * 后端跑起来后，需要登录管理后台，然后在分类管理中添加一级分类，二级分类
 
 * 可参考我的测试demo: http://servertest.boyagirl.com    
-  测试账户: test  密码：123456
+  测试账户: sinn  密码：admin
 
 ####  二，前端
 可以使用git，当然也可以直接download
@@ -190,7 +194,7 @@ sh put.sh
     
 *  去除左侧菜单栏，调整UI，推出纯社区版本     
     
-*  开发话题功能模块 ，类似于知乎的发现     
+*  开发话题功能模块 ，类似于知乎的话题    
    
 *  推出React Native版本(安卓+ios)   
     
