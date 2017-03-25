@@ -1,0 +1,37 @@
+.about-wraper {
+  width:700px;
+  margin:20px auto;
+}
+.about-wraper a { 
+  color:#00BCD4;
+}
+.about-wraper .list-box {
+  width:95%;
+  margin:0px auto;
+  padding-bottom: 15px;
+  color:#333;
+  line-height: 1.5;
+}
+.about-wraper .list-box label {
+  font-size: 14px;
+  color:#333;
+  padding-right: 10px;
+}
+.about-wraper .list-box div {
+  padding:8px;
+  color: #3aced5;
+}
+.about-item {
+  width:95%;
+  margin:0px auto;
+  padding:0px 8px;
+}
+.about-item .item {
+  font-size: 15px;
+  color:#555;
+  padding-bottom: 12px;
+  line-height: 1.5;
+}
+
+
+

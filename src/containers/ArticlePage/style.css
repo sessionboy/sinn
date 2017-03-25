@@ -1,0 +1,295 @@
+/*
+* 公共样式
+*/
+input{
+  box-sizing:border-box;
+  outline: none;
+  resize:none;
+  text-overflow:ellipsis;
+}
+/*
+* 文本域样式
+*/
+.Elfmd{
+  width:100%;
+  border:1px solid #eee;
+  margin:15px 0px;
+}
+.Elfmd .elf-entry{
+  margin:20px auto;
+  overflow: hidden;
+  position: relative;
+}
+.Elfmd .elf-entry .elf-text{
+  width:96%;
+  height:280px;
+  border:0;
+  border-radius: 4px;
+  background-color:transparent;  
+  color:#444;
+  resize:none;
+  outline:none;
+  font-size: 14px;
+  display: block;
+  margin:0px auto;
+}
+.Elfmd .elf-output{
+  width:100%;
+  padding:20px 30px;
+}
+/*
+* form表单样式
+*/
+.etr-box{
+  width:850px;
+  height:auto;
+  margin:10px auto;
+}
+.etr-title{
+  width:100%;
+  height:50px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.etr-title h3{
+  width:54px;
+  position: absolute;
+  left: 0px;
+  color:#777;
+  z-index: 10;
+  padding-left: 10px;
+  line-height: 50px;
+  text-align: center;
+}
+.etr-title input{
+  width:100%;
+  height:100%;
+  position: absolute;
+  left: 0px;
+  color:#444;
+  font-size: 16px;
+  display: block;
+  text-indent:58px;
+}
+.etr-etra{
+  overflow: hidden;
+}
+.etr-submit{
+  width: 100%;
+  margin-top:10px;
+  margin-bottom: 15px;
+}
+.etr-reprint{
+  width:100%;
+  position: relative;
+}
+.etr-reprint h3{
+  width: 80px;
+  color:#999;
+  float: left;
+  line-height: 34px;
+  font-size: 15px;
+}
+.etr-reprint input{
+  width: 400px;
+  color:#999;
+  padding-left: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+}
+.etr-reprint span{
+  padding-left: 12px;
+  color: #ccc;
+  font-size: 13px;
+}
+.upload-tip {
+  padding-left: 15px;
+  font-size: 13px;
+  color: #999;
+}
+.article-cover {
+  display: block;
+  margin:30px auto;
+  max-width: 100%;
+}
+.In_situ {
+  line-height: 25px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  padding:10px 0px;
+}
+.detail-wraper-box{
+  width:90%;
+  margin:0px auto;
+}
+.elf-output img{
+  display: block;
+  margin:10px auto;
+  max-width: 100%;
+}
+/*
+* 预览界面样式
+*/
+.review-box {
+  width:100%;
+  height:auto;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+.review-title {
+  text-align: center;
+  line-height: 28px;
+  padding:30px;
+}
+.length-tip {
+  position: absolute;
+  right: 30px;
+  bottom: 0px;
+  color:#777;
+  z-index: 99;
+  font-size: 12px;
+}
+
+/*
+* 文章详情样式
+*/
+.detail-box,.comments-box {
+  width:888px;
+  background: #fff;
+  margin:0px auto;
+}
+.detail-title {
+  width:100%;
+  margin:10px 0px;
+}
+.detail-title .title-item {
+  text-align: center;
+  font-size: 12px;
+  color:#999;
+}
+.detail-title .title-item label {
+  margin:0px 8px;
+}
+.detail-title h1{
+  line-height: 30px;
+  text-align: center;
+  border:none;
+  margin-bottom: 5px;
+}
+.article_author span{
+  margin-right:12px;
+  font-size: 13px;
+  background:#FF4081;
+  color:#fff;
+  padding:4px 8px;
+  margin-left: 50px;
+}
+.article_author a{
+  color:#3849AB;
+}
+.author_profile {
+  padding:8px 0px;
+  display: block!important;
+  height:auto!important;
+}
+.article-info-item {
+  position: relative;
+}
+.article_upload {
+  position: absolute;
+  top: 12px;
+  margin-left: 25px;
+}
+.upload-box {
+  position: relative;
+}
+.upload-util {
+  width: 100px;
+  position: absolute;
+  z-index: 99;
+  height: 35px;
+  border:0;
+  outline: none;
+}
+.praise-wrap {
+  width:100%;
+  margin:20px 0px;
+  text-align: center;
+  height:120px;
+}
+.praise-tip {
+  line-height: 36px;
+  color:#666;
+  font-size: 14px
+}
+.praise-tip span{
+  color:#3849AB;
+  font-size: 16px;
+}
+/*
+* 评论区样式
+*/
+.commont_author{
+  color: #FF4081!important;
+  font-size: 16px!important;
+}
+.comment-box {
+  padding-left: 12px!important;
+  padding-top: 8px!important;
+  font-size: 16px!important;
+  text-overflow: none!important;
+  overflow: visible!important;
+  color: #000!important;
+  font-family: 'Microsoft YaHei';
+}
+.form-comment {
+  width:85%;
+  margin:0px auto;
+}
+.comments-wrap {
+  margin-bottom: 20px;
+}
+.comment-list {
+  border-top: 1px solid #eee;
+  padding:10px;
+}
+.comment-author a{
+  margin-right: 8px;
+  font-size: 15px;
+  color:#40A9F2;
+  padding-left: 10px;
+}
+.comment-author-option {
+  color: #00BCD4!important;
+  padding:5px 0px!important;
+}
+.comment-author span{
+  color:#000;
+  font-size: 15px;
+}
+.comment-author .title{
+  margin-right: 20px;
+  font-size: 15px;
+}
+.comment-author .time{
+  color:#999;
+  font-size: 10px;
+}
+.article-detail {
+  margin: 20px 0px;
+}
+.list-right {
+  color: #999;
+  font-size: 12px;
+}
+.detail-author-box{
+  display: block!important;
+  height:auto!important;
+  padding-left: 50px!important;
+}
+
+
+

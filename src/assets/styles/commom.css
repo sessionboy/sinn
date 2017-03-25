@@ -1,0 +1,27 @@
+
+/*
+ * css-modules 优秀的css模块化解决方案
+ * @value 定义变量
+*/
+
+/* color public style*/
+
+@value blue: #0c77f8;
+
+@value red: #ff0000;
+
+@value green: #aaf200;
+
+
+
+
+/* size public style*/
+
+@value width:100%;
+
+
+
+
+
+
+/* font public style*/

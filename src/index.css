@@ -1,0 +1,28 @@
+*{
+  margin:0px;
+  text-decoration: none;
+}
+html,body{
+  width:100%;
+  margin:0px;
+  padding:0px;
+ 
+ /* background: #FAFAFA;*/
+}
+body {
+  font-size: 14px;
+  font-family: "Arial";
+}
+#root{
+  width:100%;
+  height:100%;
+}
+.ie-tips {
+  width:100%;
+  height:30px;
+  margin:30px auto;
+  text-align: center;
+  color:#777;
+  font-size: 15px;
+  background: #f9f9f9;
+}

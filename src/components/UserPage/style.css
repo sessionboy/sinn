@@ -1,0 +1,59 @@
+
+.article-box {
+	width:860px;
+	margin:0px auto;
+}
+.personal-article {
+   color:#777;
+}
+.personal-article a{
+   color:#AA8DC5;
+   font-size: 14px;
+}
+.personal-article a:hover{
+   color:#303F9F;
+}
+.list-date {
+	color:#777;
+	font-size: 12px;
+}
+.Info-box {
+	width:860px;
+	margin:0px auto;
+}
+.editor-box {
+   width:650px;
+   padding-left: 20px;
+}
+.article_author label{
+   color:#303F9F;
+   font-size: 13px;
+   padding-left: 12px;
+}
+.profile-text{
+   color:#444;
+   line-height: 1.8;
+}
+.change-avatar{
+   color:#777;
+   position: relative;
+   top:95px;
+   left: 20px;
+   cursor: pointer;
+   font-size: 12px;
+}
+.avatar-upload {
+    position: absolute;
+    width: 70px;
+    left: 25px;
+    z-index: 99;
+    top: 18px;
+    border-radius: 30;
+    height: 60px;
+    border:0;
+    outline: none;
+    cursor: pointer;
+}
+
+
+

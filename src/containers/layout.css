@@ -1,0 +1,134 @@
+/*
+* @ module 布局样式
+*/
+.app-box {
+	width:100%;
+	height:100%;
+  display: flex;
+  display: -webkit-flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.app-main-wraper {
+  flex: 1;
+}
+.app-head-wraper {
+   width:100%;
+   height:70px;
+}
+@media screen and (max-width: 768px) {
+ .main-box {
+   width:100%;
+   height:100%;
+   margin:10px;
+  }
+  .action-create {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 992px){
+ .main-box {
+   width:850px;
+   height:100%;
+   margin:0px auto;
+  }
+}
+@media screen and (min-width: 1200px){
+ .main-box {
+   width:1170px;
+   height:100%;
+   margin:0px auto;
+  }
+}
+.breadcrumb {
+  text-align: center;
+  width: 270px;
+  height: 110px;
+  margin-bottom: 0;
+  background: rgba(91,201,138,0.9);
+  border-radius: 0 50px 50px 0;
+  position: absolute;
+  top:13%;
+  left: 10%;
+  z-index: 99;
+}
+.breadcrumb span {
+  color: #fff;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 100px;
+  font-family: 'Rufina', serif;
+}
+.main-box {
+   margin:15px auto;
+   padding-bottom: 30px;
+}
+.main-banner {
+  width:100%;
+  height:180px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  position: relative;
+}
+.app-sidbar-content {
+	width:100%;
+  height:70px;
+  background: #3849AB;
+}
+.app-sidbar-content h3 {
+  color:#fff;
+  text-align: center;
+  line-height: 70px;
+}
+.main-sidebar {
+    width:340px;
+    height:100%;
+    float: right;
+}
+/*
+* 尾部样式
+*/
+.app-footer-wraper {
+  width:100%;
+  height:65px;
+  background: #F1F1F1;
+  color: #777;
+  margin-top: 25px;
+  text-align: center;
+}
+.app-footer-wraper .footer-content{
+  width:100%;
+  height:100%;
+  line-height: 65px;
+}
+.app-footer-wraper a {
+  color:#5BC98A;
+}
+.action-create {
+  position: absolute;
+  top: 45px;
+  right: 30px;
+  z-index: 999;
+}
+.action-create-icon {
+  background: #FF4081;
+  display: block;
+  width:100%;
+  height:100%;
+}
+.action-create-icon:hover {
+  background: #FF8cB3;
+}
+
+/*
+* @ global 配置样式
+*/
+.hidden_Dialog{
+   display: none;
+}
+
+
+
+
+
+
