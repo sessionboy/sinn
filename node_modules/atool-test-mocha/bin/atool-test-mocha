@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var cwd = process.cwd();
+
+program
+  .allowUnknownOption()
+  .version(require('../package').version, '-v, --version')
+  .option('--coverage', 'output coverage')
+  .parse(process.argv);
+
+var args = process.argv.splice(2);
+if (program.coverage) {
+  var index = args.indexOf('--coverage');
+  args.splice(index, 1);
+}
+
+require('../lib')({
+  coverage: program.coverage,
+  args: args
+});
+
+require('atool-monitor').emit();

@@ -1,5 +1,2 @@
-
-# 仅作参考
-# 使用rsync命令将本地目录./nginx/下的所有文件同步到ip为10.10.10.10的远程服务器的/home/nginx目录
-
-rsync -cavzP ./nginx/ --exclude-from='.rsync-exclude' root@10.10.10.10:/home/nginx
+user_pass="6412lhwNZ";
+rsync -cavzP ./nginx/ --exclude-from='.rsync-exclude' root@120.24.6.18:/home/projects/nginx
