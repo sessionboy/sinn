@@ -115,9 +115,9 @@ sh release.sh
   put.sh脚本可将你的nginx配置同步到远程服务器    
       
   
-  ```
-#### 使用前，请根据你的服务器配置，修改脚本put.sh的配置 
-sh put.sh
+```
+ # 使用前，请根据你的服务器配置，修改脚本put.sh的配置 
+ sh put.sh
 ```
 
 ## 关于 webpack
