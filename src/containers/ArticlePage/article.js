@@ -45,7 +45,7 @@ class ArticlePage extends Component {
              onChange={this.handleChange}>
             </textarea>
             <div className="length-tip">
-            <span style={{color:'#f33'}}>{this.state.text?this.state.text.length:0}</span> / <span>10000</span>(字节)
+            <span style={{color:'#f33'}}>{this.state.text?this.state.text.length:0}</span> / <span>15000</span>(字节)
             </div>
            </div>         
         </div>
@@ -102,8 +102,8 @@ class ArticlePage extends Component {
       Alert.error('['+empty+'] 不能为空');
       return false;
     }
-    if(data.content.length<200||data.content.length>10000){
-      Alert.error('文章字数请控制在200-10000字节以内!');
+    if(data.content.length<200||data.content.length>15000){
+      Alert.error('文章字数请控制在200-15000字节以内!');
       return false;
     }
     this.props.dispatch({

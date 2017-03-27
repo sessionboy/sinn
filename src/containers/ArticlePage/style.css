@@ -123,6 +123,10 @@ input{
   width:90%;
   margin:0px auto;
 }
+.elf-output {
+  font-size: 14px!important;
+  line-height: 2!important;
+}
 .elf-output img{
   display: block;
   margin:10px auto;
