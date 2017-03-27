@@ -12,7 +12,7 @@ import React, { PropTypes } from 'react';
 import highlight from 'highlight.js';
 import marked from 'marked';
 import 'github-markdown-css';
-import 'highlight.js/styles/docco.css'; 
+import 'highlight.js/styles/github.css'; 
 
 marked.setOptions({
   highlight: function (code, lang, callback) {
