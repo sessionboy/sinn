@@ -28,7 +28,9 @@ docker, nginx, linux, 阿里云ecs
 ```
  阿里云oss,  七牛云存储
 ```
-
+### 效果图如下:
+<img src="http://sinn.oss-cn-shenzhen.aliyuncs.com/images/xiaoguotu1.png" />
+<img src="http://sinn.oss-cn-shenzhen.aliyuncs.com/images/xiaoguotu2.png" />
 ## HOW TO USE?
 
 #### 一，后端, 需要首先安装和启动sinn-server
