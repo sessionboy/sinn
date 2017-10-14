@@ -1,5 +1,6 @@
 ## 简介
-   sinn是一个基于react+koa2+docker技术栈开发的，从零开始构建的个人开源项目，目标是打造一个小型社区，目前是一个雏形。
+   sinn是一个基于react+koa2+docker技术栈开发的，从零开始构建的个人开源项目。    
+   目标是要打造一个小型社区，目前是一个雏形。
    
   测试demo: http://test.boyagirl.com   
 
@@ -7,7 +8,7 @@
 
   已上线地址：http://sinn.boyagirl.com    
 
-   ( 开源重点在于技术分享和交流，如果觉得可以，右上角点颗星星喔~) 
+ ( 开源重点在于技术分享和交流，如果觉得可以，右上角点颗星星喔~ ) 
   
 ## 技术选型
 * 前端:   
@@ -28,9 +29,13 @@ docker, nginx, linux, 阿里云ecs
 ```       
 ### 技术栈亮点  
 *  react前沿技术栈，组件化、高性能的工程化开发模式
+
 *  koa2+mongodb，可快速构建 node 后端服务
+
 *  使用 async/await 终极异步处理方案
+
 *  前沿的docker容器化部署方案
+
 *  dllPlugin和commonsChunkPlugin双重拆分，更快的构建速度和更小的体积
   
 ### 效果图如下:
