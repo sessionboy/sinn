@@ -1,20 +1,18 @@
-## SINN
-  这是一个基于react+koa2技术栈开发的，纯手工、从零开始构建的个人开源博客，准确来说应该是一个小型社区，目前是一个雏形。   
-  如果你有足够的时间和精力，完全可以把[sinn](http://sinn.boyagirl.com)拓展为一个比较完备的小型、中型社区。   
-
-  前端基于react+dva架构，dva是基于redux、redux-saga 和 react-router@2.x 开发的轻量级前端框架
-
+## 简介
+   sinn是一个基于react+koa2+docker技术栈开发的，从零开始构建的个人开源项目，目标是打造一个小型社区，目前是一个雏形。
+   
   测试demo: http://test.boyagirl.com   
 
-  体验账号—用户: sinn  密码：123456
+  测试体验账号—用户: sinn  密码：123456
 
   已上线地址：http://sinn.boyagirl.com    
 
-     
-## 主要技术栈
+   ( 开源重点在于技术分享和交流，如果觉得可以，右上角点颗星星喔~) 
+  
+## 技术选型
 * 前端:   
 ```
-webpack2, react ,react-router,  dva , material-ui, generator, markdown, fetch, es6, babel
+webpack3, react ,react-router,  dva , material-ui, generator, markdown, fetch, es6, babel
 ``` 
 * 后端:
 ```
@@ -24,11 +22,21 @@ nodejs, koa2, mongoose, es6/7,  async/await,  Resful API
 ```
 docker, nginx, linux, 阿里云ecs
 ```
-* cdn存储
+* 云存储
 ```
  阿里云oss,  七牛云存储
-```
-
+```       
+### 技术栈亮点  
+*  react前沿技术栈，组件化、高性能的工程化开发模式
+*  koa2+mongodb，可快速构建 node 后端服务
+*  使用 async/await 终极异步处理方案
+*  前沿的docker容器化部署方案
+*  dllPlugin和commonsChunkPlugin双重拆分，更快的构建速度和更小的体积
+  
+### 效果图如下:
+<img src="http://sinn.oss-cn-shenzhen.aliyuncs.com/images/58d7777bc1a5bd0001672cdashow2.jpg" />
+<img src="http://sinn.oss-cn-shenzhen.aliyuncs.com/images/58d7777bc1a5bd0001672cdashow3.jpg" />
+<img src="http://sinn.oss-cn-shenzhen.aliyuncs.com/images/58d7777bc1a5bd0001672cdashow1.jpg" />
 ## HOW TO USE?
 
 #### 一，后端, 需要首先安装和启动sinn-server
@@ -47,16 +55,16 @@ git clone git@github.com:sessionboy/sinn.git
 ```
 安装依赖
 ```
- npm install 
+ npm install 或者 yarn
 ```
 或使用淘宝镜像（推荐）
 ```
 npm install --registry=https://registry.npm.taobao.org
 ```
-#### 三，接口代理 proxy ，处理跨域问题（使用默认配置可忽略本项）
-* 本项目使用webpack做代理，可避免跨域问题  （限本地开发）  
-    
-webpack配置地址：/build/webpack.dev.js   ，如下:
+#### 三，设置webpack代理 ，处理跨域问题（使用默认配置可忽略本项）
+- 本地开发
+ 1, 通过设置proxy代理，可来避免跨域问题
+  2, webpack配置地址：/build/webpack.dev.js   ，如下:
 ```
 proxy: {
        '/api' : {
@@ -64,22 +72,29 @@ proxy: {
          target: 'http://localhost:8080',
          secure: false
        },
-      }
-```
-注意：后端默认8080端口，本地启动地址默认为 \* http://localhost:8080 *\，如果你改了server的端口号,或想要代理其他地址，或者是线上地址，把target值替换为你的新代理地址即可     
-     
+      }  
+```   
 * 线上代理
-可根据你的运行环境，使用nginx做接口转发, 配置可参考/nginx文件夹下的nginx配置 (略简单，可自行拓展)
+可根据你的运行环境，使用nginx做接口转发, 配置可参考/nginx文件夹下的nginx配置 (略简单，可自行拓展)。也可以在后端设置cors来避免跨域问题。
     
-#### 四，启动
+#### 四，项目启动      
 * 开发环境    
-```
-npm run dev
-```
      
-* 正式环境     
-```
-npm start
+```     
+npm run dev  或者 yarn dev
+```   
+     
+* 正式环境 (打包构建)    
+     
+```   
+npm start 或者 yarn start  
+```   
+```    
+<!-- 
+注意，由于使用了dllPlugin将react、react-dom等公共包抽离了出来(具体打包在build/dll目录下)，
+如果你的公共模块有升级，请执行yarn dll或npm run dll来构建新的公共包。
+被抽离的公共包有：react、react-dom、material-ui、dva。    
+-->   
 ```
 
 #### 五，如何开启redux调试？
@@ -99,7 +114,7 @@ const app = dva({
 
 #### 六，项目部署
 
-* 脚本化一键部署 ，使用rsync ，同步代码到远程服务器 .(mac和linux)      
+* 脚本化一键发布 ，使用rsync ，同步代码到远程服务器 .(mac和linux)      
    
 ```
 # 使用前，请根据你的服务器配置，修改脚本release.sh的配置 
@@ -110,36 +125,22 @@ sh release.sh
       
 * nginx部署       
     
-  推荐使用nginx做静态资源访问部署，具体配置可参考/nginx文件夹下的相关配置(略简单，可自行拓展) .    
+  推荐使用nginx做前端部署，具体配置可参考/nginx文件夹下的相关配置(略简单，可自行拓展) .    
       
-  put.sh脚本可将你的nginx配置同步到远程服务器    
-      
-  
-  ```
-# 使用前，请根据你的服务器配置，修改脚本put.sh的配置 
-sh put.sh
-```
-
 ## 关于 webpack
 
-* 构建脚本在 /build/* 、 webpack.config.js
+* 构建脚本:   webpack.config.js、 webpack.dll.config.js、/build/* 
 
-* 本项目使用webpack2，其实dva本身封装有一个webpak构建工具——[ant-tool](http://ant-tool.github.io/index.html)，
-  这个工具对于复杂度不高的构建需求是非常好用方便的，可对于复杂度高，或是深度拓展的构建需求就显得有些吃力。
+* 使用dllPlugin和commonsChunkPlugin做双重拆分，构建速度快，支持热更新。
 
-* 考虑到使[sinn](http://sinn.boyagirl.com)更具拓展性和普适性，这里没有使用[ant-tool](http://ant-tool.github.io/index.html)，
-  而是以最原始的方式重新做了webpack2配置
-
-* 同时也考虑到了方便以后配置[tree-shaking](https://webpack.js.org/guides/tree-shaking/#components/sidebar/sidebar.jsx)
-
-* 另外使用了[react-hot-loader](https://github.com/gaearon/react-hot-loader)来实现热更新
+* 后续考虑加入[tree-shaking](https://webpack.js.org/guides/tree-shaking/#components/sidebar/sidebar.jsx) 和 [prepack](https://prepack.io/)  
+* 后续尝试在现有基础上，按功能模块进行拆分打包，极致优化
 
 ## 关于 dva 和 redux  
 #### 一，[dva](https://github.com/dvajs/dva/blob/master/README_zh-CN.md)是什么？为什么不使用[redux](http://cn.redux.js.org/index.html)？ 
      
- [dva](https://github.com/dvajs/dva/blob/master/README_zh-CN.md)是蚂蚁金服开源的，基于 redux、redux-saga 和 react-router@2.x 的轻量级前端框架，在其公司内外基于dva开发的项目已达上百+ 
-     
-除了dva，蚂蚁金服还开源了可以说是目前为止综合性价比最高的react UI库——[ant design](https://github.com/ant-design/ant-design)    
+ 也许很多人不知道dva。  
+[dva](https://github.com/dvajs/dva/blob/master/README_zh-CN.md)是蚂蚁金服开源的，基于 redux、redux-saga 和 react-router@2.x 的轻量级前端框架。另外蚂蚁金服还开源了可以说是目前为止综合性价比最高的react UI库——[ant design](https://github.com/ant-design/ant-design)    
      
 简单来讲，[dva](https://github.com/dvajs/dva/blob/master/README_zh-CN.md)是对redux方案的集成与拓展，它基于[elm](http://elm-lang.org/)概念形成一套相对完善的，基于react+redux生态的前端架构方案。     
      
@@ -149,7 +150,7 @@ sh put.sh
     
 总的来讲，[dva](https://github.com/dvajs/dva/blob/master/README_zh-CN.md)是蚂蚁金服前端团队对react+redux实践已久的成果，是目前为止react+redux的最佳实践方案
 
-如果你使用redux方案，建议直接使用react+dva ，当然，你有必要理解redux的原理    
+如果你使用redux方案，建议使用react+dva ，当然，你有必要理解redux的原理 。   
 
 ## 关于material-ui的实践体验
      
@@ -157,60 +158,31 @@ sh put.sh
     
 * 与它类似的还有后起之秀[react-toolbox](http://react-toolbox.com/)     
      
-这两个都是非常精美的UI库,  对于视觉的把握度非常高，同时提供了很多常用的组件，这些组件的可用性也非常的合理。
-
-   
+这两个都是非常精美的UI库,  对于视觉的把握度非常高，同时提供了很多常用的组件，组件的可用性也非常的合理。
 * 不足之处：    
     
-  1，封装了较多DOM,哪怕是一个小小的icon组件也有四五层的dom，再加上嵌套内联样式，组件的性能相对于[ant design](https://github.com/ant-design/ant-design) 等库逊色了不少    
-      
-  2，灵活性较差   
-
-  3，主要输出UI层，逻辑层并没有做较好的处理， 对于这点，[ant design](https://github.com/ant-design/ant-design)就处理得非常好    
+  1，组件的性能相比[ant design](https://github.com/ant-design/ant-design) 等库逊色了不少，在移动端尤其糟糕。    
+  2，灵活性较差。   
+  3，主要输出UI层，很多逻辑层需要手动处理， 对于这点，[ant design](https://github.com/ant-design/ant-design)就显得更人性化一些。    
+ 4，可用组件不够丰富，类似于form，pagination，upload，message(消息提示)等常用基础组件一概没有，于是不得不寻找其他开源的组件，或手动封装来处理这些问题，这样就造成了UI风格不统一。
    
- 4，组件仍不够丰富，对于form，pagination，upload，message(消息提示)等常用基础组件一概没有，于是我不得不寻找其他开源的组件，或自己封装来处理这些问题，这样就造成了UI风格不统一的问题
-   
-
- 总的来讲[material-ui](http://www.material-ui.com/)是一个优秀的UI库，但不能算是非常优秀的UI库，虽然长得帅以外，但和[ant design](https://github.com/ant-design/ant-design)比还逊色了一大截
-
-
-## 说说几点遗憾的地方     
-    
- * 本来打算实践下[relay](https://github.com/facebook/relay)+[graphql](https://github.com/facebook/graphql)，但考虑到其门槛较高，以及relay的局限性，暂时放弃 .     
-    
-*  没有搞服务端渲染   
-
-* 管理后台本打算用react+dva+[ant design](https://github.com/ant-design/ant-design)再做一套,但为了省时间，就用了ejs直出
-    
-* 没有形成统一的css解决方案，本来采用[css modules](http://www.ruanyifeng.com/blog/2016/06/css_modules.html)作为css解决方案，但由于需要import部分第三方组件的样式，只能放弃[css modules](http://www.ruanyifeng.com/blog/2016/06/css_modules.html)   
-    
-  当然，如果你乐意，可以使用less/sass，甚至是[PostCSS](https://github.com/postcss/postcss)或[css in js](http://blog.namangoel.com/css-in-js-in-css)作为你的css解决方案
+总的来讲[material-ui](http://www.material-ui.com/)是一个优秀的UI库，但在用户体验和功能性上略有不足。
     
 ## 未来规划    
-    
-*  细节优化   
 
-*  webpack2增加tree-shaking支持，减少打包体积   
-    
-*  去除左侧菜单栏，调整UI，推出纯社区版本     
-    
-*  开发话题功能模块 ，类似于知乎的话题    
+*  在现有基础上，陆续推出更多的功能    
+
+*  尝试按功能模块拆分打包，做更精细的优化 
+
+*  开发react+node实现同构的 ssr 版本
+
+*  使用react+GraphQL+node技术栈，开发GraphQL版本     
    
-*  推出React Native版本(安卓+ios)   
-    
-*  对sinn的markdown做整合，以及功能拓展，打造一个基于react的markdown编辑器，  
-
-   涵盖发表文章，发表评论，发表动态等常用的textarea域基础设施。    
-
-   并作为开源项目开源，风格类似于[mditor](https://github.com/Houfeng/mditor),但比[mditor](https://github.com/Houfeng/mditor)功能更多样 
+*  如果时间充裕，推出React Native移动端版本(安卓+ios)   
      
-#### 本人业余时间有限，所以这个过程也许会有点长    
-    
-如果你技术较好，有想法，可以申请加入这个开源项目，一起来创造。    
-   
-个人邮箱：postmaster@boyagirl.com
-
- 
-
-
-
+####  技术交流 
+ 开源重点在于技术分享和交流。
+ 如果你技术较好，有想法，我们可以一起做更好的开源项目。    
+ 个人邮箱：postmaster@boyagirl.com  或    liangfucheng@boyagirl.com
+ 非诚勿扰，HR可扰。
+      
