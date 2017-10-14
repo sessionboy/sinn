@@ -10,7 +10,8 @@
 
   已上线地址：http://sinn.boyagirl.com    
 
-     
+  如果觉得可以，右上角点颗星星噢~
+  
 ## 主要技术栈
 * 前端:   
 ```
@@ -28,7 +29,10 @@ docker, nginx, linux, 阿里云ecs
 ```
  阿里云oss,  七牛云存储
 ```
-
+### 效果图如下:
+<img src="http://sinn.oss-cn-shenzhen.aliyuncs.com/images/58d7777bc1a5bd0001672cdashow2.jpg" />
+<img src="http://sinn.oss-cn-shenzhen.aliyuncs.com/images/58d7777bc1a5bd0001672cdashow3.jpg" />
+<img src="http://sinn.oss-cn-shenzhen.aliyuncs.com/images/58d7777bc1a5bd0001672cdashow1.jpg" />
 ## HOW TO USE?
 
 #### 一，后端, 需要首先安装和启动sinn-server
