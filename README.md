@@ -1,5 +1,6 @@
 ## 简介
-   sinn是一个基于react+koa2+docker技术栈开发的，从零开始构建的个人开源项目，目标是打造一个小型社区，目前是一个雏形。
+   sinn是一个基于react+koa2+docker技术栈开发的，从零开始构建的个人开源项目。    
+   目标是打造一个小型社区，目前是一个雏形。
    
   测试demo: http://test.boyagirl.com   
 
@@ -7,7 +8,7 @@
 
   已上线地址：http://sinn.boyagirl.com    
 
-   ( 开源重点在于技术分享和交流，如果觉得可以，右上角点颗星星喔~) 
+ ( 开源重点在于技术分享和交流，如果觉得可以，右上角点颗星星喔~ ) 
   
 ## 技术选型
 * 前端:   
@@ -27,12 +28,28 @@ docker, nginx, linux, 阿里云ecs
  阿里云oss,  七牛云存储
 ```       
 ### 技术栈亮点  
-*  react前沿技术栈，组件化、高性能的工程化开发模式
-*  koa2+mongodb，可快速构建 node 后端服务
-*  使用 async/await 终极异步处理方案
-*  前沿的docker容器化部署方案
-*  dllPlugin和commonsChunkPlugin双重拆分，更快的构建速度和更小的体积
-  
+*  react前沿技术栈，组件化、高性能的工程化开发模式     
+
+*  koa2+mongodb，可快速构建 node 后端服务    
+
+*  使用 async/await 终极异步处理方案   
+
+*  前沿的docker容器化部署方案   
+
+*  dllPlugin和commonsChunkPlugin双重拆分，更快的构建速度和更小的体积   
+
+## 未来规划    
+
+*  在现有基础上，陆续推出更多的功能    
+
+*  尝试按功能模块拆分打包，做更精细的优化 
+
+*  开发react+node实现同构的 ssr 版本
+
+*  使用react+GraphQL+node技术栈，开发GraphQL版本     
+   
+*  如果时间充裕，推出React Native移动端版本(安卓+ios)   
+
 ### 效果图如下:
 <img src="http://sinn.oss-cn-shenzhen.aliyuncs.com/images/58d7777bc1a5bd0001672cdashow2.jpg" />
 <img src="http://sinn.oss-cn-shenzhen.aliyuncs.com/images/58d7777bc1a5bd0001672cdashow3.jpg" />
@@ -168,18 +185,6 @@ sh release.sh
    
 总的来讲[material-ui](http://www.material-ui.com/)是一个优秀的UI库，但在用户体验和功能性上略有不足。
     
-## 未来规划    
-
-*  在现有基础上，陆续推出更多的功能    
-
-*  尝试按功能模块拆分打包，做更精细的优化 
-
-*  开发react+node实现同构的 ssr 版本
-
-*  使用react+GraphQL+node技术栈，开发GraphQL版本     
-   
-*  如果时间充裕，推出React Native移动端版本(安卓+ios)   
-     
 ####  技术交流 
  开源重点在于技术分享和交流。
  如果你技术较好，有想法，我们可以一起做更好的开源项目。    
