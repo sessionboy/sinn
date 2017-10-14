@@ -9,6 +9,7 @@
   width:95%;
   margin:0px auto;
   padding-bottom: 15px;
+  padding-left: 15px;
   color:#333;
   line-height: 1.5;
 }
@@ -30,7 +31,26 @@
   font-size: 15px;
   color:#555;
   padding-bottom: 12px;
-  line-height: 1.5;
+  line-height: 2.2;
+}
+.skills-item p{
+  margin:10px auto;
+}
+.skills-item p span {
+  display: inline-block;
+}
+.skills-item p span:first-child{
+  width:80px;
+  text-align:left;
+}
+.skills-item p span:last-child{
+  color:#00bcd4;
+}
+.github-base{
+  padding:0px 20px;
+}
+.github-base p{
+  margin:10px auto;
 }
 
 
