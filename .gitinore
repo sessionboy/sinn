@@ -1,6 +1,6 @@
 /node_modules
-/nginx
 /dist
+/mypro
 .DS_Store
 npm-debug.log*
 yarn*
