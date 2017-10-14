@@ -1,0 +1,7 @@
+/node_modules
+/nginx
+/dist
+.DS_Store
+npm-debug.log*
+yarn*
+yarn.lock

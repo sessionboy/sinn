@@ -31,7 +31,7 @@ class ContentPage extends Component {
    if(!data||data.length==0) return <LoadTip msg="加载中..." />;
    const renderContent = data.map((item,i)=>{
     let content = item.content;
-     if(content.length>65){
+     if(content&&content.length>65){
        content = content.substring(0,65)+'…'
      }
    return <Card 

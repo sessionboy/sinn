@@ -7,6 +7,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'dva';
 import { IndexContent } from '../../components/index';
+import ImageBanner from 'assets/images/banner-01.jpg';
 
 const IndexPage=({
   apps,
@@ -51,7 +52,7 @@ const IndexPage=({
   return (
    <div>
    <div className="main-banner">
-    <img src={require("../../assets/images/banner-01.jpg")} alt=""/>
+    <img src={ImageBanner} alt=""/>
     <div className="breadcrumb">
      <span style={{fontStyle:'oblique'}}>SInn</span>
      <span>-小客栈</span>
