@@ -186,8 +186,6 @@ sh release.sh
 总的来讲[material-ui](http://www.material-ui.com/)是一个优秀的UI库，但在用户体验和功能性上略有不足。
     
 ####  技术交流 
- 开源重点在于技术分享和交流。
- 如果你技术较好，有想法，我们可以一起做更好的开源项目。    
- 个人邮箱：postmaster@boyagirl.com  或    liangfucheng@boyagirl.com
- 非诚勿扰，HR可扰。
+ 开源重点在于技术分享和交流。欢迎点赞与留言。
+ 
       
